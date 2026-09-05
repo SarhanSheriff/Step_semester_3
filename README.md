@@ -1,5 +1,19 @@
 # STEP Semester 3
 
+## Date: 05-09-2026
+
+**Today's Work:**
+- Completed Week 5 work on Access Modifiers, Encapsulation, and Object Modeling.
+- Completed the class-practice and assignment problems for the session and organized the solutions in the Week 5 feature branch.
+
+**Next Session Plan:**
+- Review the Week 5 solutions and continue with the next session's work.
+
+**Issues Faced:**
+- None
+
+---
+
 ## Date: 29-08-2026
 
 **Today's Work:**
