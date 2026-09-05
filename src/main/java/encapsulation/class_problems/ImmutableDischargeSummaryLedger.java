@@ -1,8 +1,81 @@
 package encapsulation.class_problems;
-import java.util.*;
+
 public class ImmutableDischargeSummaryLedger {
-    static class DischargeSummary { private final String patientId; private final String[] medicationCodes; DischargeSummary(String id,String[] codes){if(id==null||codes==null)throw new IllegalArgumentException();for(String c:codes)if(c==null||!c.matches("MED-[A-Z]"))throw new IllegalArgumentException("construction rejected");patientId=id;medicationCodes=codes.clone();} String[] getMedicationCodes(){return medicationCodes.clone();} DischargeSummary withCorrectedMedication(int i,String code){if(i<0||i>=medicationCodes.length||code==null||!code.matches("MED-[A-Z]"))throw new IllegalArgumentException();String[] c=medicationCodes.clone();c[i]=code;return new DischargeSummary(patientId,c);} }
-    static class CriticalCareDischargeSummary extends DischargeSummary{private final int icuDays;CriticalCareDischargeSummary(String id,String[] c,int days){super(id,c);icuDays=days;}}
-    static String processNightlyBatch(DischargeSummary[] s){int p=0,n=0,c=0,r=0;for(DischargeSummary x:s){if(x==null){n++;continue;}p++;if(x instanceof CriticalCareDischargeSummary)c++;else r++;}return p+" processed | "+n+" null skipped | "+c+" critical-care | "+r+" routine";}
-    public static void main(String[]a){System.out.println(processNightlyBatch(new DischargeSummary[]{new CriticalCareDischargeSummary("MT001",new String[]{"MED-X"},4),null,new DischargeSummary("MT002",new String[]{"MED-Y"})}));}
+
+    static class DischargeSummary {
+        private final String patientId;
+        private final String[] medicationCodes;
+
+        DischargeSummary(String id, String[] codes) {
+            if (id == null || codes == null) {
+                throw new IllegalArgumentException();
+            }
+
+            for (String c : codes) {
+                if (c == null || !c.matches("MED-[A-Z]")) {
+                    throw new IllegalArgumentException("construction rejected");
+                }
+            }
+
+            patientId = id;
+            medicationCodes = codes.clone();
+        }
+
+        String[] getMedicationCodes() {
+            return medicationCodes.clone();
+        }
+
+        DischargeSummary withCorrectedMedication(int i, String code) {
+            if (i < 0 || i >= medicationCodes.length
+                    || code == null || !code.matches("MED-[A-Z]")) {
+                throw new IllegalArgumentException();
+            }
+
+            String[] c = medicationCodes.clone();
+            c[i] = code;
+            return new DischargeSummary(patientId, c);
+        }
+    }
+
+    static class CriticalCareDischargeSummary extends DischargeSummary {
+        private final int icuDays;
+
+        CriticalCareDischargeSummary(String id, String[] c, int days) {
+            super(id, c);
+            icuDays = days;
+        }
+    }
+
+    static String processNightlyBatch(DischargeSummary[] s) {
+        int p = 0;
+        int n = 0;
+        int c = 0;
+        int r = 0;
+
+        for (DischargeSummary x : s) {
+            if (x == null) {
+                n++;
+                continue;
+            }
+
+            p++;
+            if (x instanceof CriticalCareDischargeSummary) {
+                c++;
+            } else {
+                r++;
+            }
+        }
+
+        return p + " processed | " + n + " null skipped | "
+                + c + " critical-care | " + r + " routine";
+    }
+
+    public static void main(String[] a) {
+        System.out.println(processNightlyBatch(new DischargeSummary[] {
+                new CriticalCareDischargeSummary(
+                        "MT001", new String[] {"MED-X"}, 4),
+                null,
+                new DischargeSummary("MT002", new String[] {"MED-Y"})
+        }));
+    }
 }
