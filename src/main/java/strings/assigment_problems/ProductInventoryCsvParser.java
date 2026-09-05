@@ -1,2 +1,14 @@
 package strings.assigment_problems;
-public class ProductInventoryCsvParser { static void parseInventoryRecord(String line){String[] p=line.split(",");if(p.length!=3){System.out.println("Invalid Record");return;}System.out.println("Product: "+p[0]+" | SKU: "+p[1]+" | Qty: "+p[2]);} public static void main(String[]a){parseInventoryRecord("Wireless Mouse,WM-2201,150");}}
+public class ProductInventoryCsvParser {
+    static void parseInventoryRecord(String line) {
+        String[] p=line.split(",");
+        if(p.length!=3) {
+            System.out.println("Invalid Record");
+            return;
+        }
+        System.out.println("Product: "+p[0]+" | SKU: "+p[1]+" | Qty: "+p[2]);
+    }
+    public static void main(String[]a) {
+        parseInventoryRecord("Wireless Mouse,WM-2201,150");
+    }
+}
