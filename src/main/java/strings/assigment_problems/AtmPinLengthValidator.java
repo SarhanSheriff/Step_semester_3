@@ -1,0 +1,2 @@
+package strings.assigment_problems;
+public class AtmPinLengthValidator { static void checkPinLength(String pin){System.out.println(pin!=null&&pin.length()==4?"PIN length OK.":"Invalid PIN — must be exactly 4 digits.");} public static void main(String[]a){checkPinLength("4820");}}
