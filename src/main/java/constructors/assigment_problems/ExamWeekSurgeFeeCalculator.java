@@ -1,2 +1,22 @@
 package constructors.assigment_problems;
-public class ExamWeekSurgeFeeCalculator {static final class SurgeFeeCalculator{private final double minimumSurgePercent;SurgeFeeCalculator(double p){if(p<0)throw new IllegalArgumentException();minimumSurgePercent=p;}final double calculateSurgeFee(double value,int delay){if(value<0||delay<0)throw new IllegalArgumentException();if(delay==0)return 0;int a=Math.min(delay,5),b=Math.max(0,Math.min(delay,15)-5),c=Math.max(0,delay-15);double tier=value*(a*.005+b*.01+c*.02);double floor=value*minimumSurgePercent/100;return Math.max(tier,floor);}}public static void main(String[]a){SurgeFeeCalculator s=new SurgeFeeCalculator(1);System.out.println(s.calculateSurgeFee(500,16));}}
+public class ExamWeekSurgeFeeCalculator {
+    static final class SurgeFeeCalculator {
+        private final double minimumSurgePercent;
+        SurgeFeeCalculator(double p) {
+            if(p<0)throw new IllegalArgumentException();
+            minimumSurgePercent=p;
+        }
+        final double calculateSurgeFee(double value,int delay) {
+            if(value<0||delay<0)throw new IllegalArgumentException();
+            if(delay==0)return 0;
+            int a=Math.min(delay,5),b=Math.max(0,Math.min(delay,15)-5),c=Math.max(0,delay-15);
+            double tier=value*(a*.005+b*.01+c*.02);
+            double floor=value*minimumSurgePercent/100;
+            return Math.max(tier,floor);
+        }
+    }
+    public static void main(String[]a) {
+        SurgeFeeCalculator s=new SurgeFeeCalculator(1);
+        System.out.println(s.calculateSurgeFee(500,16));
+    }
+}

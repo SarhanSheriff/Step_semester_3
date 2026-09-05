@@ -1,3 +1,55 @@
 package constructors.class_problems;
 import java.util.*;
-public class BusTicketBookingValidator {static class BusTicket{String passengerName,destination;boolean checkedIn;BusTicket(String n,String d){if(n==null||d==null||n.trim().isEmpty()||d.trim().isEmpty()||!n.matches("[A-Za-z ]+")||!d.matches("[A-Za-z ]+"))throw new IllegalArgumentException("Invalid booking");passengerName=n.trim();destination=d.trim();}void markCheckedIn(){if(checkedIn)System.out.println("Already checked in");else{checkedIn=true;System.out.println("Checked in");}}}static void processBatch(String[][] raw){Set<String> seen=new HashSet<>();int valid=0,rejected=0,dup=0;for(String[] x:raw){try{BusTicket t=new BusTicket(x[0],x[1]);String k=t.passengerName.toLowerCase()+"|"+t.destination.toLowerCase();if(!seen.add(k))dup++;else valid++;}catch(Exception e){rejected++;}}System.out.println("Valid: "+valid+" | Rejected: "+rejected+" | Duplicates skipped: "+dup);}public static void main(String[]a){processBatch(new String[][]{{"Divya","Chennai"},{"","Bangalore"},{"Ravi123","Pune"},{"Divya","Chennai"},{" "," "}});}}
+public class BusTicketBookingValidator {
+    static class BusTicket {
+        String passengerName,destination;
+        boolean checkedIn;
+        BusTicket(String n,String d) {
+            if(n==null||d==null||n.trim().isEmpty()||d.trim().isEmpty()||!n.matches("[A-Za-z ]+")||!d.matches("[A-Za-z ]+"))throw new IllegalArgumentException("Invalid booking");
+            passengerName=n.trim();
+            destination=d.trim();
+        }
+        void markCheckedIn() {
+            if(checkedIn)System.out.println("Already checked in");
+            else {
+                checkedIn=true;
+                System.out.println("Checked in");
+            }
+        }
+    }
+    static void processBatch(String[][] raw) {
+        Set<String> seen=new HashSet<>();
+        int valid=0,rejected=0,dup=0;
+        for(String[] x:raw) {
+            try {
+                BusTicket t=new BusTicket(x[0],x[1]);
+                String k=t.passengerName.toLowerCase()+"|"+t.destination.toLowerCase();
+                if(!seen.add(k))dup++;
+                else valid++;
+} catch(Exception e) {
+                rejected++;
+            }
+        }
+        System.out.println("Valid: "+valid+" | Rejected: "+rejected+" | Duplicates skipped: "+dup);
+    }
+    public static void main(String[]a) {
+        processBatch(new String[][] {
+            {
+                "Divya","Chennai"
+            }
+            , {
+                "","Bangalore"
+            }
+            , {
+                "Ravi123","Pune"
+            }
+            , {
+                "Divya","Chennai"
+            }
+            , {
+                " "," "
+            }
+        }
+        );
+    }
+}

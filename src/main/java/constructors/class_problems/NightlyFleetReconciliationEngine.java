@@ -1,2 +1,58 @@
 package constructors.class_problems;
-public class NightlyFleetReconciliationEngine {static class BusTicketAccount{static{System.out.println("Fleet reconciliation initialized");}String bookingId;double ticketFare;BusTicketAccount(String id,double fare){if(fare<0)throw new IllegalArgumentException();bookingId=id;ticketFare=fare;}BusTicketAccount(String id){this(id,0);}final double calculatePenalty(int late){return Math.max(0,late)*ticketFare*.01;}void processAccount(BusTicketAccount a,double amount,int late){System.out.println(a.bookingId+" penalty="+a.calculatePenalty(late));} }static class Sleeper extends BusTicketAccount{Sleeper(String id,double f){super(id,f);} }static void processBatch(BusTicketAccount[] a,double[] amt,int[] late){int processed=0,nulls=0,sleeper=0,regular=0;double total=0;int n=Math.min(a.length,Math.min(amt.length,late.length));for(int i=0;i<n;i++){if(a[i]==null){nulls++;continue;}processed++;double p=a[i].calculatePenalty(late[i])*(a[i] instanceof Sleeper?0.5:1);total+=p;if(a[i] instanceof Sleeper)sleeper++;else regular++;}System.out.printf("%d processed | %d null skipped | %d sleeper | %d regular | grand total penalties = %.2f%n",processed,nulls,sleeper,regular,total);}public static void main(String[]a){processBatch(new BusTicketAccount[]{new Sleeper("BK001",2000),null,new BusTicketAccount("BK002",1200)},new double[]{1200,900,700},new int[]{10,5,0});}}
+public class NightlyFleetReconciliationEngine {
+    static class BusTicketAccount {
+        static {
+            System.out.println("Fleet reconciliation initialized");
+        }
+        String bookingId;
+        double ticketFare;
+        BusTicketAccount(String id,double fare) {
+            if(fare<0)throw new IllegalArgumentException();
+            bookingId=id;
+            ticketFare=fare;
+        }
+        BusTicketAccount(String id) {
+            this(id,0);
+        }
+        final double calculatePenalty(int late) {
+            return Math.max(0,late)*ticketFare*.01;
+        }
+        void processAccount(BusTicketAccount a,double amount,int late) {
+            System.out.println(a.bookingId+" penalty="+a.calculatePenalty(late));
+        }
+    }
+    static class Sleeper extends BusTicketAccount {
+        Sleeper(String id,double f) {
+            super(id,f);
+        }
+    }
+    static void processBatch(BusTicketAccount[] a,double[] amt,int[] late) {
+        int processed=0,nulls=0,sleeper=0,regular=0;
+        double total=0;
+        int n=Math.min(a.length,Math.min(amt.length,late.length));
+        for(int i=0;i<n;i++) {
+            if(a[i]==null) {
+                nulls++;
+                continue;
+            }
+            processed++;
+            double p=a[i].calculatePenalty(late[i])*(a[i] instanceof Sleeper?0.5:1);
+            total+=p;
+            if(a[i] instanceof Sleeper)sleeper++;
+            else regular++;
+        }
+        System.out.printf("%d processed | %d null skipped | %d sleeper | %d regular | grand total penalties = %.2f%n",processed,nulls,sleeper,regular,total);
+    }
+    public static void main(String[]a) {
+        processBatch(new BusTicketAccount[] {
+            new Sleeper("BK001",2000),null,new BusTicketAccount("BK002",1200)
+        }
+        ,new double[] {
+            1200,900,700
+        }
+        ,new int[] {
+            10,5,0
+        }
+        );
+    }
+}
