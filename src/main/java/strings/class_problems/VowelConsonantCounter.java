@@ -1,0 +1,2 @@
+package strings.class_problems;
+public class VowelConsonantCounter { static void countVowelsAndConsonants(String text){int v=0,c=0;for(int i=0;i<text.length();i++){char x=Character.toLowerCase(text.charAt(i));if(x=='a'||x=='e'||x=='i'||x=='o'||x=='u')v++;else if(x>='a'&&x<='z')c++;}System.out.println("Vowels: "+v+" | Consonants: "+c);} public static void main(String[]a){countVowelsAndConsonants("Java Programming");}}
