@@ -1,2 +1,65 @@
 package encapsulation.class_problems;
-public class FieldVisibilityIntakeValidator {static String classifyAccess(String m,String c){boolean same=c.equals("SAME_CLASS"),pkg=c.equals("SAME_PACKAGE");if(m.equals("public"))return"ALLOWED";if(m.equals("private"))return same?"ALLOWED":"DENIED";if(m.equals("default"))return same||pkg?"ALLOWED":"DENIED";if(m.equals("protected"))return same||pkg?"ALLOWED":"DENIED";return"DENIED";}static String summarizeBatch(String[][] a){int ok=0,no=0;for(String[] x:a)if(classifyAccess(x[0],x[1]).equals("ALLOWED"))ok++;else no++;return"Allowed: "+ok+" | Denied: "+no;}static class PatientRecord{private String patientId,wardCode;private double vitalsScore;private String facilityName;PatientRecord(String id,String ward,double vitals,String facility){if(id==null||id.trim().length()<4)throw new IllegalArgumentException("construction rejected");patientId=id.trim();wardCode=ward;vitalsScore=vitals;facilityName=facility;}}public static void main(String[]a){System.out.println(classifyAccess("private","SAME_CLASS"));System.out.println(summarizeBatch(new String[][]{{"protected","SAME_PACKAGE"},{"protected","DIFFERENT_PACKAGE"},{"public","DIFFERENT_PACKAGE"}}));}}
+
+public class FieldVisibilityIntakeValidator {
+
+    static String classifyAccess(String m, String c) {
+        boolean same = c.equals("SAME_CLASS");
+        boolean pkg = c.equals("SAME_PACKAGE");
+
+        if (m.equals("public")) {
+            return "ALLOWED";
+        }
+        if (m.equals("private")) {
+            return same ? "ALLOWED" : "DENIED";
+        }
+        if (m.equals("default")) {
+            return same || pkg ? "ALLOWED" : "DENIED";
+        }
+        if (m.equals("protected")) {
+            return same || pkg ? "ALLOWED" : "DENIED";
+        }
+        return "DENIED";
+    }
+
+    static String summarizeBatch(String[][] a) {
+        int ok = 0;
+        int no = 0;
+
+        for (String[] x : a) {
+            if (classifyAccess(x[0], x[1]).equals("ALLOWED")) {
+                ok++;
+            } else {
+                no++;
+            }
+        }
+
+        return "Allowed: " + ok + " | Denied: " + no;
+    }
+
+    static class PatientRecord {
+        private String patientId;
+        private String wardCode;
+        private double vitalsScore;
+        private String facilityName;
+
+        PatientRecord(String id, String ward, double vitals, String facility) {
+            if (id == null || id.trim().length() < 4) {
+                throw new IllegalArgumentException("construction rejected");
+            }
+
+            patientId = id.trim();
+            wardCode = ward;
+            vitalsScore = vitals;
+            facilityName = facility;
+        }
+    }
+
+    public static void main(String[] a) {
+        System.out.println(classifyAccess("private", "SAME_CLASS"));
+        System.out.println(summarizeBatch(new String[][] {
+                {"protected", "SAME_PACKAGE"},
+                {"protected", "DIFFERENT_PACKAGE"},
+                {"public", "DIFFERENT_PACKAGE"}
+        }));
+    }
+}
