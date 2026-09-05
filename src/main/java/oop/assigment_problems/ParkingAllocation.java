@@ -1,2 +1,37 @@
 package oop.assigment_problems;
-public class ParkingAllocation {static class ParkingSlot{String slotNo;int capacity,occupiedCount;ParkingSlot(String s,int c,int o){slotNo=s;capacity=c;occupiedCount=o;}void allot(String v){if(occupiedCount<capacity){occupiedCount++;System.out.println(v+" allotted to slot "+slotNo);}}}static ParkingSlot findAvailableSlot(ParkingSlot[] s){for(ParkingSlot x:s)if(x!=null&&x.occupiedCount<x.capacity)return x;return null;}static void safeAllot(ParkingSlot[] s,String v){ParkingSlot x=findAvailableSlot(s);if(x==null)System.out.println("No slots available for "+v);else x.allot(v);}public static void main(String[]a){safeAllot(new ParkingSlot[]{new ParkingSlot("A1",4,3),new ParkingSlot("A2",5,5)},"TN09AB1234");safeAllot(new ParkingSlot[]{new ParkingSlot("A1",4,4),new ParkingSlot("A2",5,5)},"TN09AB1234");}}
+public class ParkingAllocation {
+    static class ParkingSlot {
+        String slotNo;
+        int capacity,occupiedCount;
+        ParkingSlot(String s,int c,int o) {
+            slotNo=s;
+            capacity=c;
+            occupiedCount=o;
+        }
+        void allot(String v) {
+            if(occupiedCount<capacity) {
+                occupiedCount++;
+                System.out.println(v+" allotted to slot "+slotNo);
+            }
+        }
+    }
+    static ParkingSlot findAvailableSlot(ParkingSlot[] s) {
+        for(ParkingSlot x:s)if(x!=null&&x.occupiedCount<x.capacity)return x;
+        return null;
+    }
+    static void safeAllot(ParkingSlot[] s,String v) {
+        ParkingSlot x=findAvailableSlot(s);
+        if(x==null)System.out.println("No slots available for "+v);
+        else x.allot(v);
+    }
+    public static void main(String[]a) {
+        safeAllot(new ParkingSlot[] {
+            new ParkingSlot("A1",4,3),new ParkingSlot("A2",5,5)
+        }
+        ,"TN09AB1234");
+        safeAllot(new ParkingSlot[] {
+            new ParkingSlot("A1",4,4),new ParkingSlot("A2",5,5)
+        }
+        ,"TN09AB1234");
+    }
+}
