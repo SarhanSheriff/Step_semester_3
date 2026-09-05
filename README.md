@@ -28,7 +28,7 @@
 
 ---
 
-## Date: 27-08-2026
+## Date: 22-08-2026
 
 **Today's Work:**
 - Completed Week 3 class problems and assignment problems covering OOP, classes and objects, inheritance, instance vs. static members, object references, null safety, and composition.
@@ -42,7 +42,7 @@
 
 ---
 
-## Date: 27-08-2026
+## Date: 08-08-2026
 
 **Today's Work:**
 - Completed Week 2 class problems and assignment problems covering strings and string-based problem solving.
@@ -56,7 +56,7 @@
 
 ---
 
-## Date: 27-08-2026
+## Date: 01-08-2026
 
 **Today's Work:**
 - Completed Week 1 class problems and assignment problems covering Java fundamentals and basic problem solving.
