@@ -1,0 +1,7 @@
+package oop.class_problems;
+public class FeeAccountSystem {
+    static class FeeAccount {private String regNo;private double totalFee,amountPaid;FeeAccount(String r,double f){regNo=r;totalFee=f;}void pay(double amount){if(amount>0)amountPaid=Math.min(totalFee,amountPaid+amount);}double getDue(){return totalFee-amountPaid;}}
+    static class HostelFeeAccount extends FeeAccount {HostelFeeAccount(String r,double f){super(r,f);}void payInTwoInstallments(double amount){pay(amount/2);pay(amount/2);}}
+    static class ScholarshipFeeAccount extends FeeAccount {private double scholarshipPercent;ScholarshipFeeAccount(String r,double f,double p){super(r,f);scholarshipPercent=p;}double effectiveDue(){return getDue()*(1-scholarshipPercent/100);}}
+    public static void main(String[]a){FeeAccount p=new FeeAccount("R1",150000);p.pay(150000);HostelFeeAccount h=new HostelFeeAccount("R2",200000);h.pay(60000);ScholarshipFeeAccount s=new ScholarshipFeeAccount("R3",180000,20);for(FeeAccount x:new FeeAccount[]{p,h,s}){if(x instanceof HostelFeeAccount)System.out.println("Hostel account due: Rs "+x.getDue());else if(x instanceof ScholarshipFeeAccount)System.out.println("Scholarship account effective due: Rs "+((ScholarshipFeeAccount)x).effectiveDue());else System.out.println("Plain account due: Rs "+x.getDue());}}
+}
