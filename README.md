@@ -5,7 +5,6 @@
 **Today's Work:**
 - Worked on Week 6 Inheritance & Polymorphism class problems.
 - Implemented and organized the Week 6 inheritance and polymorphism solutions in the `feature/session_6` branch.
-- Replaced the longer implementations with shorter, cleaner, human-readable versions.
 
 **Next Session Plan:**
 - Continue with the next session's problems and assignments.
