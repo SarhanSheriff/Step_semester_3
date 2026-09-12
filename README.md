@@ -6,11 +6,11 @@ Semester 3 coursework repository following the supplied GitHub structure guide.
 
 ## Date: 05-09-2026
 **Today's Work:**
-- Prepared Week 1–Week 5 class and assignment problem solutions from the supplied PDFs.
-- Organized each session as a separate feature branch with `class_problems` and `assigment_problems` packages.
+- Completed Week 5 class problems and assignment problems on Access Modifiers, Encapsulation, and Object Modeling.
+- Organized the Week 5 work in the `feature/session_5` branch.
 
 **Next Session Plan:**
-- Review solutions and run the Java compilation checks.
+- Continue with Week 6 Inheritance & Polymorphism problems.
 
 **Issues Faced:**
-- GitHub publishing requires the GitHub connection to be authorized.
+- None
