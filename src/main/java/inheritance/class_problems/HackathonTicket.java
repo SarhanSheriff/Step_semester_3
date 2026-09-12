@@ -3,8 +3,8 @@ package inheritance.class_problems;
 public class HackathonTicket extends EventTicket {
     private final String teamName;
 
-    public HackathonTicket(String attendeeId, double basePrice, String teamName) {
-        super(attendeeId, basePrice);
+    public HackathonTicket(String id, double price, String teamName) {
+        super(id, price);
         this.teamName = teamName;
     }
 
