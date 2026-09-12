@@ -3,13 +3,13 @@ package inheritance.class_problems;
 public class WorkshopTicket extends EventTicket {
     private final String track;
 
-    public WorkshopTicket(String attendeeId, double basePrice, String track) {
-        super(attendeeId, basePrice);
+    public WorkshopTicket(String id, double price, String track) {
+        super(id, price);
         this.track = track;
     }
 
-    public WorkshopTicket(double basePrice, String track) {
-        super(basePrice);
+    public WorkshopTicket(double price, String track) {
+        super(price);
         this.track = track;
     }
 
