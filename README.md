@@ -4,13 +4,13 @@ Semester 3 coursework repository following the supplied GitHub structure guide.
 
 ## Daily Progress Log
 
-## Date: 05-09-2026
+## Date: 22-08-2026
 **Today's Work:**
-- Prepared Week 1–Week 5 class and assignment problem solutions from the supplied PDFs.
-- Organized each session as a separate feature branch with `class_problems` and `assigment_problems` packages.
+- Completed Week 3 class problems and assignment problems covering OOP, classes and objects, inheritance, instance vs. static members, object references, null safety, and composition.
+- Organized the Week 3 work in the `feature/session_3` branch.
 
 **Next Session Plan:**
-- Review solutions and run the Java compilation checks.
+- Continue with Week 4 constructor problems and assignments.
 
 **Issues Faced:**
-- GitHub publishing requires the GitHub connection to be authorized.
+- None
