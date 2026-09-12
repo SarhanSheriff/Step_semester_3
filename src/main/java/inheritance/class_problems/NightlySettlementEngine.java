@@ -5,10 +5,7 @@ public final class NightlySettlementEngine {
     }
 
     public static String processNightlySettlement(EventTicket[] tickets) {
-        int processed = 0;
-        int nullSkipped = 0;
-        int group = 0;
-        int individual = 0;
+        int processed = 0, nullSkipped = 0, group = 0, individual = 0;
 
         for (EventTicket ticket : tickets) {
             if (ticket == null) {
@@ -17,11 +14,10 @@ public final class NightlySettlementEngine {
             }
 
             processed++;
-            if (ticket instanceof GroupTicket) {
+            if (ticket instanceof GroupTicket)
                 group++;
-            } else {
+            else
                 individual++;
-            }
         }
 
         return processed + " processed | "
