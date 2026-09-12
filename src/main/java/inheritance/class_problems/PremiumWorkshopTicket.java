@@ -3,20 +3,20 @@ package inheritance.class_problems;
 public class PremiumWorkshopTicket extends WorkshopTicket {
     private final double kitFee;
 
-    public PremiumWorkshopTicket(
-            String attendeeId,
-            double basePrice,
-            String track,
-            double kitFee) {
-        super(attendeeId, basePrice, track);
-        if (kitFee < 0) {
+    public PremiumWorkshopTicket(String id, double price, String track, double kitFee) {
+        super(id, price, track);
+        if (kitFee < 0)
             throw new IllegalArgumentException("Kit fee cannot be negative");
-        }
         this.kitFee = kitFee;
     }
 
     public double getKitFee() {
         return kitFee;
+    }
+
+    @Override
+    public double getBalanceDue() {
+        return super.getBalanceDue() + kitFee;
     }
 
     @Override
