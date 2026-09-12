@@ -20,11 +20,6 @@ public class PremiumWorkshopTicket extends WorkshopTicket {
     }
 
     @Override
-    public double getBalanceDue() {
-        return super.getBalanceDue() + kitFee;
-    }
-
-    @Override
     public void printTicket() {
         System.out.println("Premium Workshop Ticket | Track: " + getTrack()
                 + " | Kit Fee: " + kitFee
