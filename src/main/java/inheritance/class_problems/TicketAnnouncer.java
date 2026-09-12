@@ -5,27 +5,25 @@ public final class TicketAnnouncer {
     }
 
     public static String batchPrint(EventTicket[] tickets) {
-        StringBuilder report = new StringBuilder();
+        StringBuilder result = new StringBuilder();
 
         for (EventTicket ticket : tickets) {
             ticket.printTicket();
 
             if (ticket instanceof WorkshopTicket) {
-                WorkshopTicket workshopTicket = (WorkshopTicket) ticket;
-                report.append("Workshop | Track: ")
-                        .append(workshopTicket.getTrack())
+                WorkshopTicket w = (WorkshopTicket) ticket;
+                result.append("Workshop | Track: ")
+                        .append(w.getTrack())
                         .append(" | Balance: ")
-                        .append(workshopTicket.getBalanceDue())
-                        .append(" [Track via downcast: ")
-                        .append(workshopTicket.getTrack())
-                        .append("] | ");
+                        .append(w.getBalanceDue())
+                        .append(" | ");
             } else {
-                report.append("Standard | Balance: ")
+                result.append("Standard | Balance: ")
                         .append(ticket.getBalanceDue())
                         .append(" | ");
             }
         }
 
-        return report.toString();
+        return result.toString();
     }
 }
