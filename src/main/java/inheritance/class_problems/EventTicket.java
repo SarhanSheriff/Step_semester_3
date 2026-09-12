@@ -1,26 +1,19 @@
 package inheritance.class_problems;
 
 public class EventTicket {
-    private static int ticketsIssued = 0;
-
+    private static int ticketsIssued;
     private final String ticketId;
     private final double basePrice;
     private double balanceDue;
-    private double[] lateFeeHistory = new double[10];
-    private int lateFeeCount;
 
     public EventTicket(String attendeeId, double basePrice) {
-        if (attendeeId == null || attendeeId.trim().length() < 4) {
-            throw new IllegalArgumentException("Invalid attendee ID");
-        }
-        if (basePrice <= 0) {
-            throw new IllegalArgumentException("Base price must be positive");
-        }
+        if (attendeeId == null || attendeeId.trim().length() < 4 || basePrice <= 0)
+            throw new IllegalArgumentException();
 
         ticketsIssued++;
-        this.ticketId = "TCK-" + (1000 + ticketsIssued);
+        ticketId = "TCK-" + (1000 + ticketsIssued);
         this.basePrice = basePrice;
-        this.balanceDue = basePrice;
+        balanceDue = basePrice;
     }
 
     public EventTicket(double basePrice) {
@@ -28,37 +21,13 @@ public class EventTicket {
     }
 
     public void pay(double amount) {
-        if (amount <= 0) {
-            return;
-        }
-        balanceDue -= amount;
-        if (balanceDue < 0) {
-            balanceDue = 0;
-        }
+        if (amount > 0)
+            balanceDue = Math.max(0, balanceDue - amount);
     }
 
     public void pay(double amount, String mode) {
         System.out.println("Payment mode: " + mode);
         pay(amount);
-    }
-
-    protected void applyLateFee(double amount) {
-        if (amount <= 0) {
-            return;
-        }
-        balanceDue += amount;
-        if (lateFeeCount == lateFeeHistory.length) {
-            double[] expanded = new double[lateFeeHistory.length * 2];
-            System.arraycopy(lateFeeHistory, 0, expanded, 0, lateFeeHistory.length);
-            lateFeeHistory = expanded;
-        }
-        lateFeeHistory[lateFeeCount++] = amount;
-    }
-
-    public double[] getLateFeeHistory() {
-        double[] copy = new double[lateFeeCount];
-        System.arraycopy(lateFeeHistory, 0, copy, 0, lateFeeCount);
-        return copy;
     }
 
     public double getBalanceDue() {
@@ -82,33 +51,26 @@ public class EventTicket {
     }
 
     public static boolean isValidPromoCode(String code) {
-        if (code == null || code.length() != 5) {
-            return false;
-        }
-        if (code.charAt(0) != 'F') {
-            return false;
-        }
-        if (!Character.isDigit(code.charAt(1))
-                || !Character.isDigit(code.charAt(2))
-                || !Character.isDigit(code.charAt(3))) {
-            return false;
-        }
-        return Character.isUpperCase(code.charAt(4));
+        return code != null && code.matches("F\\d{3}[A-Z]");
     }
 
-    public static String registerBatch(String[] attendeeIds, double basePrice) {
-        int registered = 0;
-        int rejected = 0;
+    public static String registerBatch(String[] ids, double price) {
+        int registered = 0, rejected = 0;
 
-        for (String attendeeId : attendeeIds) {
+        for (String id : ids) {
             try {
-                new EventTicket(attendeeId, basePrice);
+                new EventTicket(id, price);
                 registered++;
-            } catch (IllegalArgumentException exception) {
+            } catch (IllegalArgumentException e) {
                 rejected++;
             }
         }
 
         return "Registered: " + registered + " | Rejected: " + rejected;
+    }
+
+    protected void applyLateFee(double amount) {
+        if (amount > 0)
+            balanceDue += amount;
     }
 }
