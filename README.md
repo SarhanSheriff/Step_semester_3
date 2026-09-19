@@ -1,83 +1,24 @@
 # STEP Semester 3
 
-## Date: 12-09-2026
+## Week 7 — Abstraction & Interfaces
 
-**Today's Work:**
-- Worked on Week 6 Inheritance & Polymorphism class problems.
-- Implemented and organized the Week 6 inheritance and polymorphism solutions in the `feature/session_6` branch.
+**Branch:** `feature/session_7`
 
-**Next Session Plan:**
-- Continue with the next session's problems and assignments.
+### Today's Work
+- Implemented all 5 Week 7 Category A practice problems from the Abstraction & Interfaces PDF.
+- Added abstract classes, abstract methods, interfaces, method overloading and overriding.
+- Added examples of upcasting, polymorphic dispatch, `instanceof`, safe downcasting, constructor chaining, and interface-based capabilities.
+- Organized Week 7 code under `src/main/java/abstraction/class_problems/`.
 
-**Issues Faced:**
-- None
+### Problems Covered
+1. Checkout Payment Handler
+2. Home Safety Alert Network
+3. Quarterly Bonus Calculator
+4. Universal Media Launcher
+5. Community Library Checkout System
 
----
+### Next Session Plan
+- Continue with the next week's problems and assignments.
 
-## Date: 05-09-2026
-
-**Today's Work:**
-- Completed Week 5 work on Access Modifiers, Encapsulation, and Object Modeling.
-- Completed the class-practice and assignment problems for the session and organized the solutions in the Week 5 feature branch.
-
-**Next Session Plan:**
-- Review the Week 5 solutions and continue with the next session's work.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 29-08-2026
-
-**Today's Work:**
-- Completed Week 4 class problems and assignment problems on constructors, constructor chaining with `this(...)`, and constructor-based object initialization.
-- Organized the Week 4 work in the `feature/session_4` branch.
-
-**Next Session Plan:**
-- Continue with the next session's topic and organize the work in its own feature branch.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 22-08-2026
-
-**Today's Work:**
-- Completed Week 3 class problems and assignment problems covering OOP, classes and objects, inheritance, instance vs. static members, object references, null safety, and composition.
-- Organized the Week 3 work in the `feature/session_3` branch.
-
-**Next Session Plan:**
-- Continue with Week 4 constructor problems and assignments.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 08-08-2026
-
-**Today's Work:**
-- Completed Week 2 class problems and assignment problems covering strings and string-based problem solving.
-- Organized the Week 2 work in the `feature/session_2` branch.
-
-**Next Session Plan:**
-- Continue with Week 3 OOP problems and assignments.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 01-08-2026
-
-**Today's Work:**
-- Completed Week 1 class problems and assignment problems covering Java fundamentals and basic problem solving.
-- Organized the Week 1 work in the `feature/session_1` branch.
-
-**Next Session Plan:**
-- Continue with Week 2 string problems and assignments.
-
-**Issues Faced:**
-- None
+### Issues Faced
+- None.
