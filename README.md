@@ -9,8 +9,6 @@
 - Completed the Week 8 class problems on Inheritance.
 - Completed the Week 8 assignment problems.
 - Practiced inheritance, method overriding, polymorphism, interfaces, and object relationships.
-- Organized all Week 8 work under `src/main/java/inheritance/`.
-- Kept the class problems and assignment problems in separate folders following the structure used in previous sessions.
 
 ### Class Problems
 1. Online Examination System Design and Implementation
