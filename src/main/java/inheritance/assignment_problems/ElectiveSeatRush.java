@@ -1,4 +1,4 @@
-package week8.assignment_problems.problem_4;
+package inheritance.assignment_problems;
 
 import java.util.*;
 

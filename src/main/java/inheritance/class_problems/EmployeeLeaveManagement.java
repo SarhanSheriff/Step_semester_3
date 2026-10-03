@@ -1,4 +1,4 @@
-package week8.class_problems.problem_4;
+package inheritance.class_problems;
 
 import java.time.*;
 
