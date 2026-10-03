@@ -2,23 +2,32 @@
 
 ## Week 7 — Abstraction & Interfaces
 
+**Date:** 19-09-2026  
 **Branch:** `feature/session_7`
 
 ### Today's Work
-- Implemented all 5 Week 7 Category A practice problems from the Abstraction & Interfaces PDF.
-- Added abstract classes, abstract methods, interfaces, method overloading and overriding.
-- Added examples of upcasting, polymorphic dispatch, `instanceof`, safe downcasting, constructor chaining, and interface-based capabilities.
-- Organized Week 7 code under `src/main/java/abstraction/class_problems/`.
+- Completed the Week 7 class problems on Abstraction & Interfaces.
+- Completed the Week 7 assignment problems.
+- Practiced abstract classes, abstract methods, interfaces, method overloading and overriding.
+- Practiced upcasting, polymorphism, `instanceof`, safe downcasting, constructor chaining, and interface-based capabilities.
+- Organized all Week 7 work under `src/main/java/abstraction/`.
 
-### Problems Covered
+### Class Problems
 1. Checkout Payment Handler
 2. Home Safety Alert Network
 3. Quarterly Bonus Calculator
 4. Universal Media Launcher
 5. Community Library Checkout System
 
+### Assignment Problems
+1. Basic Drawing Canvas
+2. One-Click Data Export
+3. Fleet Maintenance Tracker
+4. Arena Battle Simulator
+5. Connected Home Control Panel
+
 ### Next Session Plan
-- Continue with the next week's problems and assignments.
+- Continue with Week 8 Inheritance problems and assignments.
 
 ### Issues Faced
 - None.
