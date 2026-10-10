@@ -109,3 +109,32 @@
 
 **Issues Faced:**
 - None
+
+---
+
+## Date: 10-10-2026
+
+**Today's Work:**
+- Completed Week 10 class problems on data structures: Smart Home Platform, Customer Registry, Student Marks Grid, Product Price Finder, and Library Platform.
+- Organized the solutions in the `feature/session_10` branch.
+
+**Next Session Plan:**
+- Continue with the next session's problems and assignments.
+
+**Issues Faced:**
+- None
+
+---
+
+## Date: 03-10-2026
+
+**Today's Work:**
+- Completed Week 9 class problems on two pointers, grid traversal, binary search, and sliding windows.
+- Completed Week 9 assignment problems on prefix sums, sliding windows, prefix-sum hashing, binary search, and spiral traversal.
+- Organized the solutions in the `feature/session_9` branch.
+
+**Next Session Plan:**
+- Continue with Week 10 class problems.
+
+**Issues Faced:**
+- None
