@@ -1,5 +1,20 @@
 # STEP Semester 3
 
+## Date: 31-10-2026
+
+**Today's Work:**
+- Completed the Week 11 class problem on Stacks and the five linked-list assignment problems.
+- Practiced monotonic stacks, fast and slow pointers, linked-list reversal, addition with carry, intersection detection, and in-place reordering.
+- Organized the solutions in the `feature/session_11` branch.
+
+**Next Session Plan:**
+- Continue with the next session's problems and assignments.
+
+**Issues Faced:**
+- None
+
+---
+
 ## Date: 10-10-2026
 
 **Today's Work:**
