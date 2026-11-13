@@ -13,11 +13,11 @@
 5. Reorder Linked List Alternately from Ends
 
 ### Assignment Problems
-1. Cancelling the K-th Last Order
-2. Campus Portal Browser History
-3. Merging Two Ticket Counters
-4. The Palindrome Train Code
-5. Polynomial Calculator
+1. The Canteen Price Streak
+2. The Hackathon Banner Printer
+3. The Quiz Scoring Formula
+4. The Bus Bay Ring
+5. The Fire Drill Exits
 
 ### Topics Practiced
 - Singly and doubly linked lists
