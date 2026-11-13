@@ -3,9 +3,9 @@
 ## Date: 31-10-2026
 
 **Today's Work:**
-- Completed five Week 11 class problems on stacks, queues, circular deque operations, and breadth-first search.
-- Completed five linked-list assignment problems.
-- Organized the solutions in the `feature/session_11` branch.
+- Completed five Week 11 Part A class problems on linked lists.
+- Completed five individual linked-list coding assignments.
+- Practiced fast and slow pointers, in-place reversal, node relinking, doubly linked navigation, and linked-list operations.
 
 **Next Session Plan:**
 - Continue with the next session's problems and assignments.
@@ -14,6 +14,8 @@
 - None
 
 ---
+
+
 
 
 ## Date: 10-10-2026
