@@ -3,8 +3,8 @@
 ## Date: 31-10-2026
 
 **Today's Work:**
-- Completed the Week 11 class problem on Stacks and the five linked-list assignment problems.
-- Practiced monotonic stacks, fast and slow pointers, linked-list reversal, addition with carry, intersection detection, and in-place reordering.
+- Completed five Week 11 class problems on stacks, queues, circular deque operations, and breadth-first search.
+- Completed five linked-list assignment problems.
 - Organized the solutions in the `feature/session_11` branch.
 
 **Next Session Plan:**
@@ -14,6 +14,7 @@
 - None
 
 ---
+
 
 ## Date: 10-10-2026
 
