@@ -1,141 +1,32 @@
 # STEP Semester 3
 
-## Date: 10-10-2026
+## Week 11 — Stacks, Queues & Linked Lists
 
-**Today's Work:**
-- Completed Week 10 class problems and assignment problems on Data Structures.
-- Practiced sets and object equality, 2D arrays, binary search, resource management, and linked list operations.
-- Organized the solutions in the `feature/session_10` branch.
+**Date:** 31-10-2026  
+**Branch:** `feature/session_11`
 
-**Next Session Plan:**
+### Today's Work
+- Completed five class problems covering monotonic stacks, nested decoding with stacks, expression evaluation, circular deque operations, and multi-source breadth-first search.
+- Completed five linked-list assignment problems.
+- Practiced stack-based processing, operator precedence, circular arrays, BFS, two-pointer techniques, doubly linked navigation, list merging, and polynomial addition.
+- Kept the Week 11 solutions separate from previous sessions.
+
+### Class Problems
+1. The Canteen Price Streak
+2. The Hackathon Banner Printer
+3. The Quiz Scoring Formula
+4. The Bus Bay Ring
+5. The Fire Drill Exits
+
+### Assignment Problems
+1. Cancelling the K-th Last Order
+2. Campus Portal Browser History
+3. Merging Two Ticket Counters
+4. The Palindrome Train Code
+5. Polynomial Calculator
+
+### Next Session Plan
 - Continue with the next session's problems and assignments.
 
-**Issues Faced:**
-- None
-
----
-
-## Date: 03-10-2026
-
-**Today's Work:**
-- Completed Week 9 class problems and assignment problems on Arrays & Array Algorithms.
-- Practiced two pointers, 2D array traversal, binary search, sliding windows, prefix sums, prefix-sum hashing, and spiral traversal.
-- Organized the solutions in the `feature/session_9` branch.
-
-**Next Session Plan:**
-- Continue with Week 10 Data Structures problems and assignments.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 26-09-2026
-
-**Today's Work:**
-- Completed Week 8 class problems and assignment problems on Inheritance.
-- Implemented the Week 8 problems and assignments in the `feature/session_8` branch.
-
-**Next Session Plan:**
-- Continue with the next session's problems and assignments.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 19-09-2026
-
-**Today's Work:**
-- Completed Week 7 class problems and assignment problems on Abstraction & Interfaces.
-- Implemented the Week 7 problems and assignments in the `feature/session_7` branch.
-
-**Next Session Plan:**
-- Continue with Week 8 Inheritance problems and assignments.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 12-09-2026
-
-**Today's Work:**
-- Worked on Week 6 Inheritance & Polymorphism class problems.
-- Implemented and organized the Week 6 inheritance and polymorphism solutions in the `feature/session_6` branch.
-
-**Next Session Plan:**
-- Continue with the next session's problems and assignments.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 05-09-2026
-
-**Today's Work:**
-- Completed Week 5 work on Access Modifiers, Encapsulation, and Object Modeling.
-- Completed the class-practice and assignment problems for the session and organized the solutions in the Week 5 feature branch.
-
-**Next Session Plan:**
-- Review the Week 5 solutions and continue with the next session's work.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 29-08-2026
-
-**Today's Work:**
-- Completed Week 4 class problems and assignment problems on constructors, constructor chaining with `this(...)`, and constructor-based object initialization.
-- Organized the Week 4 work in the `feature/session_4` branch.
-
-**Next Session Plan:**
-- Continue with the next session's topic and organize the work in its own feature branch.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 22-08-2026
-
-**Today's Work:**
-- Completed Week 3 class problems and assignment problems covering OOP, classes and objects, inheritance, instance vs. static members, object references, null safety, and composition.
-- Organized the Week 3 work in the `feature/session_3` branch.
-
-**Next Session Plan:**
-- Continue with Week 4 constructor problems and assignments.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 08-08-2026
-
-**Today's Work:**
-- Completed Week 2 class problems and assignment problems covering strings and string-based problem solving.
-- Organized the Week 2 work in the `feature/session_2` branch.
-
-**Next Session Plan:**
-- Continue with Week 3 OOP problems and assignments.
-
-**Issues Faced:**
-- None
-
----
-
-## Date: 01-08-2026
-
-**Today's Work:**
-- Completed Week 1 class problems and assignment problems covering Java fundamentals and basic problem solving.
-- Organized the Week 1 work in the `feature/session_1` branch.
-
-**Next Session Plan:**
-- Continue with Week 2 string problems and assignments.
-
-**Issues Faced:**
-- None
+### Issues Faced
+- None.
