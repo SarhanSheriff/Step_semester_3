@@ -58,6 +58,13 @@ public class OrderWalkthroughWithNestedTypes {
         }
     }
 
+    private static String formatAmount(double amount) {
+        if (amount == (long) amount) {
+            return String.valueOf((long) amount);
+        }
+        return String.valueOf(amount);
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Order order = new Order();
@@ -76,11 +83,11 @@ public class OrderWalkthroughWithNestedTypes {
 
         while (cursor.hasNext()) {
             Order.LineItem item = cursor.next();
-            System.out.println(item.productName + " " + item.total());
+            System.out.println(item.productName + " " + formatAmount(item.total()));
             grandTotal += item.total();
         }
 
-        System.out.println("Total " + grandTotal);
+        System.out.println("Total " + formatAmount(grandTotal));
         System.out.println("cursor: inner (reads the order's array)");
         System.out.println("line item: static nested (needs no order)");
 
