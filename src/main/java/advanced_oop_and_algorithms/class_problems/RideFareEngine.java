@@ -27,6 +27,11 @@ public class RideFareEngine {
         double calculateFare() { return 20 + 10 * distance + 2 * waitingMinutes; }
         String getType() { return "Bike"; }
     }
+    private static String formatAmount(double amount) {
+        if (amount == (long) amount) return String.valueOf((long) amount);
+        return String.valueOf(amount);
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -41,10 +46,10 @@ public class RideFareEngine {
         double total = 0;
         for (Ride ride : rides) {
             double fare = ride.calculateFare();
-            System.out.println(ride.getType() + ": " + fare);
+            System.out.println(ride.getType() + ": " + formatAmount(fare));
             total += fare;
         }
-        System.out.println("Total: " + total);
+        System.out.println("Total: " + formatAmount(total));
         // Pricing all rides takes O(n) time.
     }
 }
