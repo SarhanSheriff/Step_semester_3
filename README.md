@@ -1,5 +1,38 @@
 # STEP Semester 3
 
+## Date: 14-11-2026
+
+**Today's Work:**
+- Completed five Week 12 Category A practice problems covering nested classes, abstract classes, polymorphism, queues, and algorithms.
+- Practiced stable merge sort, maximum consecutive gain, binary search, and two-pointer search.
+- Organized the solutions in the `feature/session_12` branch.
+
+**Next Session Plan:**
+- Continue with the next session's problems and assignments.
+
+**Issues Faced:**
+- None
+
+---
+
+## Date: 31-10-2026
+
+**Today's Work:**
+- Completed five Week 11 Part A class problems on linked lists.
+- Completed five individual linked-list coding assignments.
+- Practiced fast and slow pointers, in-place reversal, node relinking, doubly linked navigation, and linked-list operations.
+
+**Next Session Plan:**
+- Continue with the next session's problems and assignments.
+
+**Issues Faced:**
+- None
+
+---
+
+
+
+
 ## Date: 10-10-2026
 
 **Today's Work:**
